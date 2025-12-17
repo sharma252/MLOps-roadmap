@@ -4,61 +4,54 @@ import PropTypes from "prop-types";
 const Header = ({ title, description, cloud, totalProgress }) => {
   return (
     <header className="hero-header">
-      <div className="hero-overlay"></div>
       <div className="container position-relative">
-        <div className="row align-items-center py-5">
+        <div className="row align-items-center">
           <div className="col-lg-7 col-md-6 mb-4 mb-md-0">
             <div className="hero-content">
-              <div className="d-flex align-items-center mb-3">
-                <div className="icon-wrapper me-3">
-                  <Zap size={40} strokeWidth={2.5} />
+              <div className="d-flex align-items-center mb-4">
+                <div className="p-3 bg-white bg-opacity-25 rounded-circle me-4 backdrop-blur">
+                  <Zap size={40} strokeWidth={2.5} className="text-white" />
                 </div>
-                <h1 className="display-4 fw-bold mb-0 text-white">{title}</h1>
+                <h1 className="display-4 fw-bold mb-0 text-white tracking-tight">{title}</h1>
               </div>
-              <p className="lead mb-3 text-white-90">{description}</p>
-              <div className="d-flex align-items-center badge bg-white bg-opacity-25 text-white px-3 py-2 rounded-pill">
-                <Cloud className="me-2" size={18} />
-                <span className="small fw-medium">{cloud}</span>
+              <p className="lead mb-4 text-blue-100 opacity-90" style={{ fontSize: '1.25rem' }}>{description}</p>
+              <div className="d-inline-flex align-items-center bg-white bg-opacity-10 border border-white border-opacity-25 px-4 py-2 rounded-pill backdrop-blur">
+                <Cloud className="me-2 text-white" size={20} />
+                <span className="text-white fw-medium">{cloud}</span>
               </div>
             </div>
           </div>
           <div className="col-lg-5 col-md-6">
-            <div className="progress-card">
-              <div className="card border-0 shadow-lg">
-                <div className="card-body p-4">
-                  <div className="d-flex align-items-center justify-content-between mb-3">
-                    <h5 className="card-title mb-0 text-dark">Your Progress</h5>
-                    <TrendingUp className="text-success" size={24} />
-                  </div>
-                  <div className="text-center my-3">
-                    <div className="progress-circle mb-2">
-                      <h2 className="display-3 fw-bold text-primary mb-0">
-                        {totalProgress}
-                        <span className="fs-4 text-muted">%</span>
-                      </h2>
-                    </div>
-                    <p className="text-muted mb-3">Completed</p>
-                  </div>
-                  <div className="progress" style={{ height: "12px" }}>
-                    <div
-                      className="progress-bar bg-gradient-success"
-                      role="progressbar"
-                      style={{ width: `${totalProgress}%` }}
-                      aria-valuenow={totalProgress}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      <span className="visually-hidden">
-                        {totalProgress}% Complete
-                      </span>
-                    </div>
-                  </div>
-                  <div className="d-flex justify-content-between mt-2">
-                    <small className="text-muted">Start</small>
-                    <small className="text-muted">Complete</small>
-                  </div>
-                </div>
-              </div>
+            <div className="progress-ring-card animate-float">
+               <div className="d-flex align-items-center justify-content-between mb-4">
+                 <h5 className="mb-0 fw-bold">Your Journey</h5>
+                 <TrendingUp className="text-emerald-400" size={24} />
+               </div>
+               <div className="text-center my-4">
+                 <div className="display-3 fw-bold mb-0 text-white">
+                   {totalProgress}
+                   <span className="fs-4 opacity-50">%</span>
+                 </div>
+                 <p className="text-white text-opacity-75">Mastered</p>
+               </div>
+               
+               <div className="progress bg-white bg-opacity-10" style={{ height: "8px" }}>
+                 <div
+                   className="progress-bar bg-gradient-to-r from-blue-400 to-emerald-400"
+                   role="progressbar"
+                   style={{ 
+                     width: `${totalProgress}%`,
+                     background: 'linear-gradient(90deg, #34d399 0%, #60a5fa 100%)' 
+                   }}
+                   aria-valuenow={totalProgress}
+                   aria-valuemin="0"
+                   aria-valuemax="100"
+                 />
+               </div>
+               <div className="d-flex justify-content-between mt-3 text-white text-opacity-50 small">
+                 <span>Start</span>
+                 <span>Expert</span>
+               </div>
             </div>
           </div>
         </div>
