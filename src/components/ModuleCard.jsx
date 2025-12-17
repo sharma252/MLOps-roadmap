@@ -5,7 +5,7 @@ const ModuleCard = ({ module, isCompleted, onToggle }) => {
   return (
     <div className="col-md-6 mb-3">
       <div
-        className={`glass-card h-100 p-4 transition-all duration-300 ${isCompleted ? 'border-success border-opacity-50' : ''}`}
+        className={`glass-card h-100 p-4 transition-all duration-300 cursor-default ${isCompleted ? 'border-success border-opacity-50' : ''}`}
         style={{ background: isCompleted ? 'rgba(240, 253, 244, 0.6)' : 'rgba(255, 255, 255, 0.6)' }}
       >
         <div className="d-flex align-items-start justify-content-between mb-3">

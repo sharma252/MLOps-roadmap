@@ -2,6 +2,7 @@
   /* Modern Color Palette */
   --primary: #4f46e5;       /* Indigo 600 */
   --primary-dark: #4338ca;  /* Indigo 700 */
+  --primary-light: #eef2ff; /* Indigo 50 */
   --secondary: #0ea5e9;     /* Sky 500 */
   --accent: #f43f5e;        /* Rose 500 */
   --dark: #0f172a;          /* Slate 900 */
@@ -23,6 +24,10 @@
   /* Utilities */
   --radius-xl: 1rem;
   --radius-2xl: 1.5rem;
+}
+
+.cursor-default {
+  cursor: default;
 }
 
 body {
@@ -141,20 +146,30 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-glow);
 }
 
+.phase-header.cursor-not-allowed {
+  cursor: not-allowed !important;
+}
+
+.phase-header.cursor-not-allowed:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .phase-header.active {
-  background: var(--primary);
-  color: white;
+  background: var(--primary-light);
+  color: var(--dark);
+  border-color: var(--primary);
 }
 
 .phase-header.active .text-muted {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--gray) !important;
 }
 
 .phase-header.active h3 {
-  color: white !important;
+  color: var(--primary) !important;
 }
 
-/* Module List */
+  /* Module List */
 .module-list {
   padding-top: 1rem;
   padding-left: 1rem;
@@ -202,12 +217,61 @@ h1, h2, h3, h4, h5, h6 {
   animation: pulse-glow 0.6s ease-out;
 }
 
-/* Footer */
-.modern-footer {
-  margin-top: auto;
+/* Capstone Card */
+.capstone-card {
   background: white;
-  border-top: 1px solid #e2e8f0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.05);
+  background-clip: padding-box;
+  box-shadow: var(--shadow-lg);
+}
+
+.capstone-card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: -1px;
+  border-radius: inherit;
+  /* Softer gradient: Gold to Rose to Purple, but more pastel/muted */
+  background: linear-gradient(135deg, #fbbf24, #f43f5e, #8b5cf6); 
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.capstone-header {
+  /* Very light warm background */
+  background: linear-gradient(135deg, #fffbeb 0%, #ffffff 100%);
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem; /* Slightly smaller radius */
+  padding: 1rem; /* Reduced padding from 1.25rem */
+  transition: all 0.2s;
+}
+
+.step-card:hover {
+  background: white;
+  border-color: #fbbf24; /* Amber 400 - Softer gold */
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  background: var(--gradient-dark);
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 3rem 0;
+}
+
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Responsive */

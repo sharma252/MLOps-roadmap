@@ -54,8 +54,8 @@ const PhaseCard = ({
              <div className="text-end me-4 d-none d-md-block">
                <div className="h5 mb-0 fw-bold text-primary">{progress}%</div>
              </div>
-             <div className={`p-2 rounded-circle transition-transform duration-300 ${isExpanded ? 'bg-white bg-opacity-20 rotate-180' : ''}`}>
-                <ChevronDown size={24} className={isExpanded ? 'text-white' : 'text-gray-400'} />
+             <div className={`p-2 rounded-circle transition-transform duration-300 ${isExpanded ? 'bg-primary bg-opacity-10 rotate-180' : ''}`}>
+                <ChevronDown size={24} className={isExpanded ? 'text-primary' : 'text-gray-400'} />
              </div>
           </div>
         </div>
