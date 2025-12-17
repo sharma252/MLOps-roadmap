@@ -112,6 +112,15 @@ The project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that
 
 This pipeline triggers on push and pull requests to the `main` or `master` branches.
 
+## 🌍 GitHub Pages Deployment
+
+The application is configured to deploy automatically to GitHub Pages using the included workflow (`.github/workflows/deploy.yml`).
+
+1. **Push Changes**: Simply push to the `main` or `master` branch.
+2. **Setup**: Go to your repository **Settings > Pages** and verify that "GitHub Actions" is selected as the source.
+3. **URL**: The site will be available at `https://<your-username>.github.io/MLOps-roadmap/`.
+
+
 
 ## 📚 Learning Path
 
