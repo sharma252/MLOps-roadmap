@@ -15,6 +15,7 @@ A modern, interactive React application for learning MLOps from fundamentals to 
 
 ```
 MLOps-roadmap/
+├── .github/             # CI/CD workflows
 ├── public/              # Static assets
 ├── src/
 │   ├── components/      # Reusable React components
@@ -39,6 +40,8 @@ MLOps-roadmap/
 │   └── index.css       # Global styles
 ├── package.json
 ├── vite.config.js
+├── Dockerfile           # Docker configuration
+├── nginx.conf           # Nginx configuration
 └── README.md
 ```
 
@@ -79,6 +82,36 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+
+## 🐳 Docker Support
+
+To build and run the application using Docker:
+
+1. **Build the Docker image:**
+
+```bash
+docker build -t mlops-roadmap .
+```
+
+2. **Run the container:**
+
+```bash
+docker run -p 8080:80 mlops-roadmap
+```
+
+3. **Access the application:**
+   Open your browser and navigate to `http://localhost:8080`
+
+## 🔄 CI/CD Pipeline
+
+The project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that automatically:
+- Installs dependencies
+- Lints the code
+- Builds the application
+- Verifies the Docker build
+
+This pipeline triggers on push and pull requests to the `main` or `master` branches.
+
 
 ## 📚 Learning Path
 
