@@ -47,7 +47,15 @@ const ModuleCard = ({ module, isCompleted, onToggle }) => {
               <small className="text-muted d-block mb-1 fw-bold">Resources</small>
                <div className="d-flex flex-wrap gap-2">
                    {module.resources.map((res, i) => (
-                       <span key={i} className="badge bg-gray-100 text-dark border fw-normal">{res}</span>
+                       <a 
+                         key={i} 
+                         href={res.url} 
+                         target="_blank" 
+                         rel="noopener noreferrer" 
+                         className="badge bg-gray-100 text-dark border fw-normal text-decoration-none"
+                        >
+                            {res.title}
+                        </a>
                    ))}
                </div>
             </div>
@@ -63,7 +71,12 @@ ModuleCard.propTypes = {
     title: PropTypes.string.isRequired,
     topics: PropTypes.arrayOf(PropTypes.string).isRequired,
     exercise: PropTypes.string,
-    resources: PropTypes.arrayOf(PropTypes.string).isRequired,
+    resources: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+      })
+    ).isRequired,
   }).isRequired,
   isCompleted: PropTypes.bool.isRequired,
   onToggle: PropTypes.func.isRequired,
