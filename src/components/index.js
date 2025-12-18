@@ -4,3 +4,5 @@ export { default as ModuleCard } from "./ModuleCard";
 export { default as CapstoneProject } from "./CapstoneProject";
 export { default as ExitCriteria } from "./ExitCriteria";
 export { default as SuccessConfetti } from "./SuccessConfetti";
+export { default as Footer } from "./Footer";
+export { default as RoadmapPhases } from "./RoadmapPhases";
