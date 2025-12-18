@@ -26,7 +26,12 @@ export const roadmapData = {
           ],
           exercise:
             "Corrupt 20% of Iris dataset labels and measure F1-Score vs Accuracy drop",
-          resources: ["Scikit-Learn User Guide: Model Evaluation"],
+          resources: [
+            {
+              title: "Scikit-Learn: Model Evaluation",
+              url: "https://scikit-learn.org/stable/modules/model_evaluation.html",
+            },
+          ],
         },
         {
           id: "drift",
@@ -39,7 +44,12 @@ export const roadmapData = {
           ],
           exercise:
             "Train on Wine Quality dataset, add +2.0 to alcohol feature, observe drift",
-          resources: ["Evidently AI Blog: ML Monitoring 101"],
+          resources: [
+            {
+              title: "Evidently AI: ML Monitoring 101",
+              url: "https://www.evidentlyai.com/blog/machine-learning-monitoring-data-drift-detection",
+            },
+          ],
         },
         {
           id: "resources",
@@ -51,7 +61,16 @@ export const roadmapData = {
             "AWS Instance Types: C (compute), R (memory), G/P (GPU)",
           ],
           exercise: "Calculate VRAM for bert-base-uncased (110M params)",
-          resources: [],
+          resources: [
+            {
+              title: "EleutherAI: Transformer Math 101",
+              url: "https://blog.eleuther.ai/transformer-math/",
+            },
+            {
+              title: "AWS EC2 Instance Types",
+              url: "https://aws.amazon.com/ec2/instance-types/",
+            },
+          ],
         },
       ],
       exitCriteria: [
@@ -77,7 +96,16 @@ export const roadmapData = {
             "poetry/pip-tools for deterministic builds",
           ],
           exercise: "Write Pydantic class that rejects invalid housing data",
-          resources: [],
+          resources: [
+            {
+              title: "Real Python: Pydantic Guide",
+              url: "https://realpython.com/python-pydantic/",
+            },
+            {
+              title: "Pytest: Getting Started",
+              url: "https://docs.pytest.org/en/7.1.x/getting-started.html",
+            },
+          ],
         },
         {
           id: "docker",
@@ -89,7 +117,16 @@ export const roadmapData = {
             "Multi-stage builds for smaller images",
           ],
           exercise: "Write Dockerfile for Python model with layer caching",
-          resources: [],
+          resources: [
+            {
+              title: "Docker for Data Science",
+              url: "https://towardsdatascience.com/docker-for-data-science-9c0ce73e8263",
+            },
+            {
+              title: "Best Practices for Writing Dockerfiles",
+              url: "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/",
+            },
+          ],
         },
         {
           id: "iac",
@@ -101,7 +138,16 @@ export const roadmapData = {
             "AWS provider basics",
           ],
           exercise: "Create S3 bucket using Terraform",
-          resources: [],
+          resources: [
+            {
+              title: "Terraform AWS Tutorial",
+              url: "https://developer.hashicorp.com/terraform/tutorials/aws-get-started",
+            },
+            {
+              title: "Terraform Best Practices",
+              url: "https://www.terraform-best-practices.com/",
+            },
+          ],
         },
       ],
       exitCriteria: [
@@ -127,7 +173,16 @@ export const roadmapData = {
             "JSON request/response handling",
           ],
           exercise: "Wrap Scikit-Learn model in FastAPI endpoint",
-          resources: [],
+          resources: [
+            {
+              title: "FastAPI User Guide",
+              url: "https://fastapi.tiangolo.com/tutorial/",
+            },
+            {
+              title: "Machine Learning with FastAPI",
+              url: "https://testdriven.io/blog/fastapi-machine-learning/",
+            },
+          ],
         },
         {
           id: "mlflow",
@@ -139,7 +194,12 @@ export const roadmapData = {
             "Loading from registry: models:/MyModel/Production",
           ],
           exercise: "Log training run to local MLflow",
-          resources: [],
+          resources: [
+            {
+              title: "MLflow Tracking Quickstart",
+              url: "https://mlflow.org/docs/latest/tracking.html",
+            },
+          ],
         },
         {
           id: "airflow",
@@ -151,7 +211,12 @@ export const roadmapData = {
             "Schedule intervals & sensors",
           ],
           exercise: "Create DAG: Fetch SQL → Retrain → Save Model",
-          resources: [],
+          resources: [
+            {
+              title: "Apache Airflow Tutorial",
+              url: "https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html",
+            },
+          ],
         },
       ],
       exitCriteria: [
@@ -177,7 +242,12 @@ export const roadmapData = {
             "Push workflow: build → tag → push",
           ],
           exercise: "Push Docker image to ECR via CLI",
-          resources: [],
+          resources: [
+            {
+              title: "Amazon ECR User Guide",
+              url: "https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html",
+            },
+          ],
         },
         {
           id: "lambda",
@@ -189,7 +259,16 @@ export const roadmapData = {
             "Cold starts: 5-10 seconds",
           ],
           exercise: "Deploy FastAPI container to Lambda",
-          resources: [],
+          resources: [
+            {
+              title: "Mangum: ASGI Adapter",
+              url: "https://mangum.io/",
+            },
+            {
+              title: "Deploy Python Lambda with Container Images",
+              url: "https://docs.aws.amazon.com/lambda/latest/dg/python-image.html",
+            },
+          ],
         },
         {
           id: "sagemaker",
@@ -201,7 +280,12 @@ export const roadmapData = {
             "GPU instances: P4, G5",
           ],
           exercise: "Deploy model using SageMaker SDK",
-          resources: [],
+          resources: [
+            {
+              title: "SageMaker Inference",
+              url: "https://docs.aws.amazon.com/sagemaker/latest/dg/deploy-model.html",
+            },
+          ],
         },
       ],
       exitCriteria: [
@@ -227,7 +311,16 @@ export const roadmapData = {
             "Grafana dashboards",
           ],
           exercise: "Add /metrics endpoint and visualize in Grafana",
-          resources: [],
+          resources: [
+            {
+              title: "Prometheus FastAPI Instrumentator",
+              url: "https://github.com/trallnag/prometheus-fastapi-instrumentator",
+            },
+            {
+              title: "Grafana Fundamentals",
+              url: "https://grafana.com/docs/grafana/latest/fundamentals/",
+            },
+          ],
         },
         {
           id: "evidently",
@@ -239,7 +332,12 @@ export const roadmapData = {
             "Log predictions for analysis",
           ],
           exercise: "Generate drift report on dummy dataset",
-          resources: [],
+          resources: [
+            {
+              title: "Evidently AI Documentation",
+              url: "https://docs.evidentlyai.com/",
+            },
+          ],
         },
       ],
       exitCriteria: [
