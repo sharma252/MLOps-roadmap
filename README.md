@@ -175,7 +175,7 @@ The application uses localStorage for progress persistence. No backend or databa
 ## 📖 Additional Documentation
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) - Component architecture and data flow
-- [REFACTORING_SUMMARY.md](REFACTORING_SUMMARY.md) - Detailed refactoring notes
+
 
 ## 🤝 Contributing
 
