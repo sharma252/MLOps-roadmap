@@ -1,4 +1,3 @@
-import React from "react";
 import { Header, Footer, RoadmapPhases, CapstoneProject, SuccessConfetti } from "./components";
 import { useRoadmapLogic } from "./hooks";
 import { roadmapData } from "./data/roadmapData";
@@ -26,11 +25,11 @@ const MLOpsRoadmap = () => {
       />
 
       <div className="container py-5">
-        <RoadmapPhases 
-            completedItems={completedItems}
-            expandedPhases={expandedPhases}
-            togglePhase={togglePhase}
-            onToggleModule={handleToggleModule}
+        <RoadmapPhases
+          completedItems={completedItems}
+          expandedPhases={expandedPhases}
+          togglePhase={togglePhase}
+          onToggleModule={handleToggleModule}
         />
         <CapstoneProject capstone={roadmapData.capstone} />
       </div>
