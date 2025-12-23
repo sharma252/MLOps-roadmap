@@ -1,4 +1,3 @@
-import React from 'react';
 import PhaseCard from './PhaseCard';
 import { calculatePhaseProgress, isPhaseUnlocked } from '../utils/progressUtils';
 import { roadmapData } from '../data/roadmapData';
