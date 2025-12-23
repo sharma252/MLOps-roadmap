@@ -105,6 +105,7 @@ docker run -p 8080:80 mlops-roadmap
 ## 🔄 CI/CD Pipeline
 
 The project includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that automatically:
+
 - Installs dependencies
 - Lints the code
 - Builds the application
@@ -119,43 +120,6 @@ The application is configured to deploy automatically to GitHub Pages using the 
 1. **Push Changes**: Simply push to the `main` or `master` branch.
 2. **Setup**: Go to your repository **Settings > Pages** and verify that "GitHub Actions" is selected as the source.
 3. **URL**: The site will be available at `https://<your-username>.github.io/MLOps-roadmap/`.
-
-
-
-## 📚 Learning Path
-
-### Phase 1: ML Fundamentals for Ops
-
-- Production Metrics & Evaluation
-- Model Drift & Decay
-- Resource Sizing & Hardware
-
-### Phase 2: Core DevOps Foundations
-
-- Production-Grade Python
-- Containerization (Docker)
-- Infrastructure as Code (Terraform)
-
-### Phase 3: MLOps Architecture
-
-- Model Serving (FastAPI)
-- Model Registry (MLflow)
-- Workflow Orchestration (Airflow)
-
-### Phase 4: AWS Cloud Stack
-
-- Artifact Stores (S3 & ECR)
-- Serverless Inference (Lambda)
-- Managed Inference (SageMaker)
-
-### Phase 5: Monitoring & Observability
-
-- System Monitoring (Prometheus & Grafana)
-- ML Monitoring (Evidently AI)
-
-### Capstone Project
-
-Build a real-time customer churn prediction API with full MLOps pipeline.
 
 ## 🎨 Key Improvements
 
@@ -176,19 +140,12 @@ The application uses localStorage for progress persistence. No backend or databa
 
 - [ARCHITECTURE.md](ARCHITECTURE.md) - Component architecture and data flow
 
-
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
 Built with ❤️ for aspiring MLOps engineers
 
 ---
-
-**Happy Learning! 🚀**
